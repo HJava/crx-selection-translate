@@ -238,7 +238,7 @@ function check( st , event , text ) {
  * @returns {String}
  */
 function getText() {
-  return selection.toString().trim();
+  return selection.toString().trim().replace(/(\n|\r)/g, ()=>' ').replace(/ {2,}/g, ()=>' ');
 }
 
 /**
